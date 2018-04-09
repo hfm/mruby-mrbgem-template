@@ -458,7 +458,7 @@ static mrb_value mrb_#{@params[:class_name].downcase}_init(mrb_state *mrb, mrb_v
   data = (mrb_#{@params[:class_name].downcase}_data *)mrb_malloc(mrb, sizeof(mrb_#{@params[:class_name].downcase}_data));
   data->str = str;
   data->len = len;
-  DATA_PTR(self) = data;
+  DATA_PTR(self) = &data;
 
   return self;
 }
